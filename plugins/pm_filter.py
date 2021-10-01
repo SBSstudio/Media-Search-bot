@@ -334,7 +334,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
              ],
             [
                 InlineKeyboardButton('Home 🏠', callback_data='home'),
-                InlineKeyboardButton('Close ❌', callback_data='close'),
             ],
             ]
             await query.message.edit(text=ABOUT_TEXT, reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
@@ -347,7 +346,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
              ],
             [
                 InlineKeyboardButton('Home 🏠', callback_data='home'),
-                InlineKeyboardButton('Close ❌', callback_data='close'),
             ],
             ]
             await query.message.edit(text=HELP_TEXT, reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
@@ -362,7 +360,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
              ],
             [
                 InlineKeyboardButton('Home 🏠', callback_data='home'),
-                InlineKeyboardButton('Close ❌', callback_data='close'),
             ],
             ]
             await query.message.edit(text=GHELP_TEXT, reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
