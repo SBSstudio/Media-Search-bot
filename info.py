@@ -29,8 +29,15 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Messages
 default_start_msg = """
-**Hi, I'm Media Search Bot or ypu can call me as Auto-Filter Bot**
-Here you can search files in Inline mode as well as PM, Use the below buttons to search files or send me the name of file to search.
+Hello !<b>I'm My K-Drama Bot.</b>
+
+Here you can search Koren Tv series in inline mode. You can start the search by pressing the buttons below or sending the K-Drama name 
+
+Tap <b>Help 🆘</b> To get more informations.Tap /request To Request Drama.
+
+Powered By @SBS_Studio
+"""
+
 """
 START_MSG = environ.get('START_MSG', default_start_msg)
 
