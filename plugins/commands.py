@@ -7,6 +7,24 @@ from utils import Media, get_file_details
 from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
 
+HELP_TEXT = """
+<b>My K-Drama Bot Help!</b> 
+
+Click  Then type drama name &get results.
+
+Or, 
+
+Sned K-Drama Nme directly & get results.
+
+Now My K-Drama Bot is allow Groups. Tap <b>Group Help 👥</b> Button & get more informations.
+
+/request command for Request dramas. 
+
+<b>Invite Friends & support us.</b>
+
+Powered By @SBS_Studio
+"""
+
 @Client.on_message(filters.command("start"))
 async def start(bot, cmd):
     usr_cmdall1 = cmd.text
@@ -99,12 +117,16 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Search Here", switch_inline_query_current_chat=''),
-                        InlineKeyboardButton("Other Bots", url="https://t.me/subin_works/122")
+                        InlineKeyboardButton('Search Hear 🔎', switch_inline_query_current_chat=''),
+                        InlineKeyboardButton('Go Inline 🔅', switch_inline_query=''),
                     ],
                     [
-                        InlineKeyboardButton("About", callback_data="about")
-                    ]
+                        InlineKeyboardButton("Help 🆘", callback_data="help"),
+                    ],
+                    [
+                        InlineKeyboardButton('Updates Channel 🗣', url='https://t.me/SBS_Studio'),
+                        InlineKeyboardButton("Invite Friends 👫", url="https://t.me/share/url?url=Hello%20People%F0%9F%98%8A%0A%0AAre%20you%20want%20to%20download%20more%20k-dramas%E2%9D%93%0A%0A%E2%80%A2%40myKdrama_bot%20will%20help%20you%20to%20Download%20k-dreams%20Easily%20.%0A%0AFeatures%20of%20%40myKdrama_bot%0A%20%20%20~%20Inline%20keyboard%20%E2%9C%94%EF%B8%8F%0A%20%20%20~%20Request%20Dramas%20%E2%9C%94%EF%B8%8F%0A%20%20%20~%20Inline%20Search%20Mode%20%E2%9C%94%EF%B8%8F%0A%20%20%20~%2024%2A7%20Service%20%E2%9C%94%EF%B8%8F%0A%20%20%20~%20Now%20Bot%20stable%20100%25%0A%0A12%20000%2B%20episodes%20were%20available%20on%20%40myKdrama_bot%0A%0ABot%20Link%3A-%20%20%40myKdrama_bot%0A%0A%7C%20Share%20Friends%20%26%20Support%20Us%20.%20.%20.%E2%9D%A4%EF%B8%8F"),
+                    ],
                 ]
             )
         )
@@ -188,12 +210,15 @@ async def delete(bot, message):
         await msg.edit('File is successfully deleted from database')
     else:
         await msg.edit('File not found in database')
-@Client.on_message(filters.command('about'))
+@Client.on_message(filters.command('help'))
 async def bot_info(bot, message):
     buttons = [
-        [
-            InlineKeyboardButton('Update Channel', url='https://t.me/subin_works'),
-            InlineKeyboardButton('Source Code', url='https://github.com/subinps/Media-Search-bot')
-        ]
-        ]
-    await message.reply(text="<b>Developer : <a href='https://t.me/subinps_bot'>SUBIN</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/subinps/Media-Search-bot'>Click here</a>\nUpdate Channel : <a href='https://t.me/subin_works'>XTZ Bots</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+             [
+                InlineKeyboardButton('About 📄', callback_data='about'),
+                InlineKeyboardButton('Group Help 👥', callback_data='ghelp'),
+             ],
+            [
+                InlineKeyboardButton('Home 🏠', callback_data='home'),
+            ],
+            ]
+    await message.reply(text=HELP_TEXT, reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
