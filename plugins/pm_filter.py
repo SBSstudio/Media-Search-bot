@@ -333,7 +333,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         print(e)
                         f_caption=f_caption
                 if f_caption is None:
-                    f_caption = "💎Upload From:- @myKdrama_bot \n\n〽️**Mixed English Subtitles**〽️ \n\nThanks for using me ❤️ ©@SBS_Studio"
+                    f_caption = f"{title}"
                 buttons = [
                     [
                         InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122'),
