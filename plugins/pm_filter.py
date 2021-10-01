@@ -277,12 +277,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
                 return
         elif query.data == "about":
-            buttons = [
-                [
-                    InlineKeyboardButton('Update Channel', url='https://t.me/subin_works'),
-                    InlineKeyboardButton('Source Code', url='https://github.com/subinps/Media-Search-bot')
-                ]
-                ]
+            buttons = buttons = [
+             [
+                InlineKeyboardButton('Download Subtitles 🎦', url='https://t.me/TGsubtitledownloadebot'),
+            ],
+            [
+                InlineKeyboardButton('Updates Channel 🗣', url='https://t.me/SBS_Studio'),
+                InlineKeyboardButton('Rate ⭐', url='https://t.me/tlgrmcbot?start=mykdrama_bot-review'),
+            ],
+        ]
             await query.message.edit(text="<b>Developer : <a href='https://t.me/subinps_bot'>SUBIN</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/subinps/Media-Search-bot'>Click here</a>\nUpdate Channel : <a href='https://t.me/subin_works'>XTZ Bots</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
 
@@ -303,11 +306,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 if f_caption is None:
                     f_caption = f"{files.file_name}"
                 buttons = [
-                    [
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122'),
-                        InlineKeyboardButton('Update Channel', url='https://t.me/subin_works')
-                    ]
-                    ]
+             [
+                InlineKeyboardButton('Download Subtitles 🎦', url='https://t.me/TGsubtitledownloadebot'),
+            ],
+            [
+                InlineKeyboardButton('Updates Channel 🗣', url='https://t.me/SBS_Studio'),
+                InlineKeyboardButton('Rate ⭐', url='https://t.me/tlgrmcbot?start=mykdrama_bot-review'),
+            ],
+        ]
                 
                 await query.answer()
                 await client.send_cached_media(
@@ -335,11 +341,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 if f_caption is None:
                     f_caption = f"{title}"
                 buttons = [
-                    [
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122'),
-                        InlineKeyboardButton('Update Channel', url='https://t.me/subin_works')
-                    ]
-                    ]
+             [
+                InlineKeyboardButton('Download Subtitles 🎦', url='https://t.me/TGsubtitledownloadebot'),
+            ],
+            [
+                InlineKeyboardButton('Updates Channel 🗣', url='https://t.me/SBS_Studio'),
+                InlineKeyboardButton('Rate ⭐', url='https://t.me/tlgrmcbot?start=mykdrama_bot-review'),
+            ],
+        ]
                 
                 await query.answer()
                 await client.send_cached_media(
