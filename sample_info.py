@@ -23,9 +23,13 @@ COLLECTION_NAME = 'channel_files'  # If you are using the same database, then us
 
 # Messages
 START_MSG = """
-**Hi, I'm Media Search bot**
+Hello !<b>I'm My K-Drama Bot.</b>
 
-Here you can search files in inline mode. Just press follwing buttons and start searching.
+Here you can search Koren Tv series in inline mode. You can start the search by pressing the buttons below or sending the K-Drama name 
+
+Tap <b>Help 🆘</b> To get more informations.Tap /request To Request Drama.
+
+Powered By @SBS_Studio
 """
 
 SHARE_BUTTON_TEXT = 'Checkout {username} for searching files'
