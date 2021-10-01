@@ -286,7 +286,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             for files in filedetails:
                 title = files.file_name
                 size=files.file_size
-                f_caption= '💎Upload From:- @myKdrama_bot \n\n〽️**Mixed English Subtitles**〽️ \n\nThanks for using me ❤️ ©@SBS_Studio',
+                f_caption= "💎Upload From:- @myKdrama_bot \n\n〽️**Mixed English Subtitles**〽️ \n\nThanks for using me ❤️ ©@SBS_Studio",
                 if CUSTOM_FILE_CAPTION:
                     try:
                         f_caption=CUSTOM_FILE_CAPTION.format(file_name=title, file_size=size, file_caption=f_caption)
@@ -294,7 +294,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         print(e)
                         f_caption=f_caption
                 if f_caption is None:
-                    f_caption = '💎Upload From:- @myKdrama_bot \n\n〽️**Mixed English Subtitles**〽️ \n\nThanks for using me ❤️ ©@SBS_Studio'
+                    f_caption = "💎Upload From:- @myKdrama_bot \n\n〽️**Mixed English Subtitles**〽️ \n\nThanks for using me ❤️ ©@SBS_Studio",
                 buttons = [
                     [
                         InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122'),
@@ -318,7 +318,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             for files in filedetails:
                 title = files.file_name
                 size=files.file_size
-                f_caption= '💎Upload From:- @myKdrama_bot \n\n〽️**Mixed English Subtitles**〽️ \n\nThanks for using me ❤️ ©@SBS_Studio',
+                f_caption= "💎Upload From:- @myKdrama_bot \n\n〽️**Mixed English Subtitles**〽️ \n\nThanks for using me ❤️ ©@SBS_Studio",
                 if CUSTOM_FILE_CAPTION:
                     try:
                         f_caption=CUSTOM_FILE_CAPTION.format(file_name=title, file_size=size, file_caption=f_caption)
