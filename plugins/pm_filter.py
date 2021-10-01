@@ -289,7 +289,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f_caption= "💎Upload From:- @myKdrama_bot \n\n〽️**Mixed English Subtitles**〽️ \n\nThanks for using me ❤️ ©@SBS_Studio",
                 if CUSTOM_FILE_CAPTION:
                     try:
-                        f_caption=CUSTOM_FILE_CAPTION.format(file_name=title, file_size=size, file_caption=f_caption)
+                        f_caption=CUSTOM_FILE_CAPTION.format(file_name=title, file_size=size, file_caption="💎Upload From:- @myKdrama_bot \n\n〽️**Mixed English Subtitles**〽️ \n\nThanks for using me ❤️ ©@SBS_Studio")
                     except Exception as e:
                         print(e)
                         f_caption=f_caption
@@ -321,7 +321,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f_caption= "💎Upload From:- @myKdrama_bot \n\n〽️**Mixed English Subtitles**〽️ \n\nThanks for using me ❤️ ©@SBS_Studio",
                 if CUSTOM_FILE_CAPTION:
                     try:
-                        f_caption=CUSTOM_FILE_CAPTION.format(file_name=title, file_size=size, file_caption=f_caption)
+                        f_caption=CUSTOM_FILE_CAPTION.format(file_name=title, file_size=size, file_caption="💎Upload From:- @myKdrama_bot \n\n〽️**Mixed English Subtitles**〽️ \n\nThanks for using me ❤️ ©@SBS_Studio")
                     except Exception as e:
                         print(e)
                         f_caption= f_caption,
